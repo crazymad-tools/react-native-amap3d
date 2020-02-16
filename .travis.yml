@@ -37,8 +37,9 @@ jobs:
       cache: *android-cache
       script:
         - nvm install node
-        - yarn
-        - yarn build
+        - npm i
+        - npm i typescript
+        - npm run build
         - cd android
         - TERM=dumb ./gradlew build
         - ls -lh app/build/outputs/apk/debug
